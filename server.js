@@ -8,7 +8,7 @@ let results = {};
 
 // Serve static files from the public directory
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve the main HTML file at the root URL
 app.get('/', (req, res) => {
